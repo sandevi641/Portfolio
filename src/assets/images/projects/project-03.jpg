@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#bg3)" />
+  
+  <!-- Terminal Window -->
+  <rect x="50" y="45" width="700" height="410" rx="10" fill="#090d16" stroke="rgba(16,185,129,0.3)" stroke-width="1.5" />
+  <rect x="50" y="45" width="700" height="38" rx="10" fill="#04121a" />
+  <circle cx="75" cy="64" r="5" fill="#ef4444" />
+  <circle cx="92" cy="64" r="5" fill="#f59e0b" />
+  <circle cx="109" cy="64" r="5" fill="#10b981" />
+  <text x="400" y="69" fill="#10b981" font-family="monospace" font-size="12" text-anchor="middle">api-gateway-service: node server.js</text>
+  
+  <!-- Code lines -->
+  <text x="80" y="120" fill="#64748b" font-family="monospace" font-size="14">// Microservices API Gateway Router &amp; Rate Limiter</text>
+  <text x="80" y="155" fill="#38bdf8" font-family="monospace" font-size="14">const express = require('express');</text>
+  <text x="80" y="185" fill="#38bdf8" font-family="monospace" font-size="14">const { createRateLimiter } = require('./middleware/limiter');</text>
+  <text x="80" y="215" fill="#38bdf8" font-family="monospace" font-size="14">const app = express();</text>
+  <text x="80" y="260" fill="#a855f7" font-family="monospace" font-size="14">app.use('/api/v1/auth', authProxyRoute);</text>
+  <text x="80" y="290" fill="#a855f7" font-family="monospace" font-size="14">app.use('/api/v1/orders', verifyJwt, orderProxyRoute);</text>
+  <text x="80" y="340" fill="#34d399" font-family="monospace" font-size="14">[INFO] 2026-08-28T12:00:00.000Z Gateway listening on port 8080 (Healthy)</text>
+  <text x="80" y="375" fill="#34d399" font-family="monospace" font-size="14">[METRICS] Total Requests: 124,820 | P99 Latency: 42ms | Error Rate: 0.00%</text>
+</svg>

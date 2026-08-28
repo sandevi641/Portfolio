@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="100%" stop-color="#818cf8" />
+    </linearGradient>
+  </defs>
+  <rect width="400" height="400" fill="url(#avatarGrad)" />
+  <circle cx="200" cy="200" r="180" fill="none" stroke="url(#glowGrad)" stroke-width="3" stroke-dasharray="8 6" opacity="0.6" />
+  
+  <!-- Developer Avatar Silhouette -->
+  <circle cx="200" cy="145" r="55" fill="#38bdf8" opacity="0.85" />
+  <path d="M110 320 C110 240, 150 215, 200 215 C250 215, 290 240, 290 320 Z" fill="#38bdf8" opacity="0.85" />
+  
+  <!-- Terminal / Code Badge -->
+  <rect x="130" y="325" width="140" height="34" rx="17" fill="#090d16" stroke="#38bdf8" stroke-width="1.5" />
+  <text x="200" y="347" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="bold" text-anchor="middle">&lt;DEV /&gt;</text>
+</svg>
