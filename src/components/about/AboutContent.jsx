@@ -49,14 +49,14 @@ export const AboutContent = () => {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
       {/* Narrative Paragraphs */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
         {about.detailedBio && about.detailedBio.length > 0 ? (
           about.detailedBio.map((paragraph, index) => (
             <p
               key={index}
               style={{
                 fontSize: '1.025rem',
-                lineHeight: 1.7,
+                lineHeight: 1.75,
                 color: 'var(--color-text-secondary)',
               }}
             >
@@ -64,7 +64,7 @@ export const AboutContent = () => {
             </p>
           ))
         ) : (
-          <p style={{ fontSize: '1.025rem', lineHeight: 1.7 }}>
+          <p style={{ fontSize: '1.025rem', lineHeight: 1.75 }}>
             {about.introduction}
           </p>
         )}
@@ -85,23 +85,28 @@ export const AboutContent = () => {
               key={index}
               className="card-base"
               style={{
-                padding: '1rem 1.2rem',
+                padding: '1.1rem 1.25rem',
                 display: 'flex',
                 alignItems: 'flex-start',
-                gap: '0.85rem',
+                gap: '1rem',
                 backgroundColor: 'var(--color-surface)',
+                border: item.highlight
+                  ? '1px solid rgba(56, 189, 248, 0.35)'
+                  : '1px solid var(--color-border)',
               }}
             >
               <div
                 style={{
-                  padding: '0.5rem',
+                  padding: '0.6rem',
                   borderRadius: 'var(--border-radius-sm)',
                   backgroundColor: 'var(--color-badge-bg)',
+                  border: '1px solid var(--color-badge-border)',
                   color: 'var(--color-primary)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
                   marginTop: '0.15rem',
+                  boxShadow: '0 2px 8px rgba(var(--color-primary-rgb), 0.15)',
                 }}
               >
                 <Icon size={18} />
@@ -111,11 +116,12 @@ export const AboutContent = () => {
                   style={{
                     fontSize: '0.75rem',
                     textTransform: 'uppercase',
-                    letterSpacing: '0.05em',
+                    letterSpacing: '0.06em',
                     color: 'var(--color-text-muted)',
+                    fontFamily: 'var(--font-mono)',
                     fontWeight: 600,
                     display: 'block',
-                    marginBottom: '0.2rem',
+                    marginBottom: '0.25rem',
                   }}
                 >
                   {item.label}
@@ -125,7 +131,7 @@ export const AboutContent = () => {
                     fontSize: '0.925rem',
                     fontWeight: 600,
                     color: item.highlight ? 'var(--color-primary)' : 'var(--color-text-primary)',
-                    lineHeight: 1.4,
+                    lineHeight: 1.45,
                     display: 'block',
                   }}
                 >

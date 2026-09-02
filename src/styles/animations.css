@@ -25,7 +25,7 @@
     box-shadow: 0 0 15px rgba(var(--color-primary-rgb), 0.2);
   }
   50% {
-    box-shadow: 0 0 25px rgba(var(--color-primary-rgb), 0.45);
+    box-shadow: 0 0 28px rgba(var(--color-primary-rgb), 0.45);
   }
 }
 
@@ -46,16 +46,46 @@
 
 @keyframes floatSlow {
   0%, 100% {
-    transform: translateY(0);
+    transform: translateY(0px) rotate(0deg);
   }
   50% {
-    transform: translateY(-6px);
+    transform: translateY(-8px) rotate(0.5deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(8px);
   }
 }
 
 @keyframes codeBlink {
   0%, 100% { opacity: 1; }
   50% { opacity: 0; }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 @keyframes modalBackdropFade {
@@ -66,7 +96,7 @@
 @keyframes modalContentZoom {
   from {
     opacity: 0;
-    transform: scale(0.96) translateY(12px);
+    transform: scale(0.95) translateY(16px);
   }
   to {
     opacity: 1;
@@ -87,11 +117,35 @@
 }
 
 .animate-float {
-  animation: floatSlow 5s ease-in-out infinite;
+  animation: floatSlow 6s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatReverse 7s ease-in-out infinite;
 }
 
 .cursor-blink {
   animation: codeBlink 1s infinite steps(1);
+}
+
+.text-gradient {
+  background: var(--gradient-primary);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-shimmer {
+  background: linear-gradient(
+    90deg,
+    var(--color-primary) 0%,
+    #ffffff 50%,
+    var(--color-primary) 100%
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
 }
 
 /* Reduced motion preference */

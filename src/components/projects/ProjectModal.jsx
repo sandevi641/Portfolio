@@ -93,16 +93,26 @@ export const ProjectModal = ({ project, onClose }) => {
         <div
           style={{
             width: '100%',
-            height: '260px',
-            backgroundColor: 'var(--color-bg-tertiary)',
+            height: '280px',
+            backgroundColor: 'var(--color-surface-elevated)',
             overflow: 'hidden',
             borderBottom: '1px solid var(--color-border)',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            padding: '1rem',
           }}
         >
           <img
             src={project.image}
             alt={project.title}
-            style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+            style={{
+              maxWidth: '100%',
+              maxHeight: '100%',
+              objectFit: 'contain',
+              borderRadius: '6px',
+              boxShadow: '0 4px 14px rgba(0, 0, 0, 0.25)',
+            }}
           />
         </div>
 

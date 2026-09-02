@@ -5,82 +5,84 @@
  * The Projects section and ProjectModal dynamically consume this file.
  */
 
+import project01Img from '../assets/images/projects/project-01.jpg';
+import project02Img from '../assets/images/projects/project-02.png';
+import project03Img from '../assets/images/projects/project-03.jpg';
+
 export const projectCategories = [
   'All',
-  'Full Stack',
   'Web',
   'Mobile',
-  'Backend',
-  'Academic',
-  'Personal',
+  'Backend'
 ];
 
 export const projectsData = [
   {
     id: 'project-01',
     number: '01',
-    title: 'Cloud-Native Task & Workflow Management Platform',
+    title: 'StrayCare Mobile Application',
     featured: true,
-    category: 'Full Stack',
-    tags: ['Full Stack', 'Web', 'Personal'],
+    category: 'Mobile',
+    tags: ['Mobile'],
     shortDescription:
-      'A scalable enterprise productivity application with real-time collaboration, role-based access control, and automated workflow pipelines.',
+      'Developed a full-stack animal rescue platform for rescue reporting, lost & found alerts, pet adoption, and location-based veterinary/shelter discovery. Implemented secure authentication,real-time messaging, forum discussions, WebRTC calls, push notifications, and an admin dashboard for user and rescue management.',
     fullDescription:
-      'Engineered an end-to-end task collaboration platform featuring real-time socket communication, interactive Kanban boards, role-based authorization, and analytical reporting dashboards.',
+      'StrayCare – Animal Rescue & Community Platform Developed a full-stack animal rescue and community platform using (Expo) for mobile development and React for the web-based administrative dashboard. The platform enables users to report stray animals, post lost & found alerts, manage pet adoptions, and discover nearby veterinary clinics and shelters through location-based services.Implemented secure authentication and role-based access control using Firebase Authentication, with MongoDB for data management and Node.js with Express.js for backend API development. Integrated real-time communication features including instant messaging, forum discussions, WebRTC peer-to-peer calls, and push notifications using Socket.io and Firebase.Developed a web-based Admin Dashboard for user verification, content moderation, rescue case monitoring, and overall rescue operation management',
     problem:
-      'Distributed student teams and small engineering groups often lack lightweight, privacy-focused task management tools that combine intuitive Kanban boards with automated sprint metrics.',
+      'Stray animals often lack a centralized platform for reporting, rescue coordination, adoption, and finding nearby veterinary or shelter services. This can lead to delayed responses, poor communication, and difficulty managing rescue cases effectively.',
     solution:
-      'Built a reactive single-page app powered by React and Node.js REST APIs with WebSocket integrations, persistent state caching with Redis, and modular PostgreSQL schemas.',
-    technologies: ['React', 'Node.js', 'Express', 'PostgreSQL', 'Socket.io', 'Tailwind CSS', 'Docker'],
+      'Developed StrayCare, a centralized platform that connects users, rescuers, veterinarians, and shelters to efficiently report and manage animal rescue cases. The system supports real-time communication, location-based services, lost & found alerts, pet adoption, and an admin dashboard for effective rescue operation management.',
+    technologies: ['React Native', 'Firebase', 'Node.js', 'Express', 'MongoDB', 'Socket.io'],
     keyFeatures: [
-      'Real-time multi-user board updates via WebSockets',
-      'Granular JWT-based authentication & RBAC permissions',
-      'Automated sprint velocity charts and productivity analytics',
-      'RESTful API with comprehensive Swagger documentation',
+      'Stray animal rescue reporting and real-time case tracking',
+      'Secure Firebase authentication with role-based access control',
+      'Lost & found alerts, pet adoption, and location-based shelter/vet search',
+      'Real-time messaging, forum discussions, WebRTC calls, and push notifications',
+      'Web-based admin dashboard for user verification and rescue management'
     ],
     contribution:
-      'Designed the relational database schema, implemented the JWT authentication pipeline, and built the draggable Kanban interface with state synchronization.',
-    role: 'Lead Full-Stack Developer',
+      'Implemented distance-based nearest rescuer matching, rescue request acceptance/rejection, and real-time case status updates. Developed rescuer profile and case history management, along with discussion threads, comments, and interaction notifications.',
+    role: '',
     challenges:
-      'Handling concurrent board edits and optimistic UI updates without race conditions or state desynchronization across active browser tabs.',
+      'Ensuring reliable real-time notifications for rescue requests and forum interactions.',
     outcomes:
-      'Achieved sub-100ms API response times and successfully supported 50+ concurrent mock user sessions during load testing.',
-    image: '/src/assets/images/projects/project-01.jpg',
-    github: 'https://github.com/your-username/cloud-task-manager',
+      'Improved rescue coordination, nearest-rescuer matching, case tracking, profile management, and community engagement through real-time interactions.',
+    image: project01Img,
+    github: 'https://github.com/orgs/TeamTechForge/dashboard',
     liveDemo: 'https://demo-task-manager.example.com',
   },
   {
     id: 'project-02',
     number: '02',
-    title: 'Campus Food & Cafeteria Pre-Order Mobile App',
+    title: 'BlogNet – Multi-User Content Publishing Web Application',
     featured: false,
-    category: 'Mobile',
-    tags: ['Mobile', 'Academic'],
+    category: 'Web',
+    tags: ['Web'],
     shortDescription:
-      'Cross-platform mobile application for university students to browse daily dining menus, customize orders, and skip cafeteria wait lines.',
+      'Full-stack blogging platform for creating, managing, and discovering content with secure authentication, social engagement features, real-time notifications, and administrative moderation.',
     fullDescription:
-      'Developed as an academic software engineering capstone project to eliminate peak lunch queue bottlenecks across campus cafeterias using real-time order tracking and QR pick-up verifications.',
+      'Developed as an academic software engineering project to provide a centralized blogging platform for content creation and community engagement, featuring secure authentication, post management, social interactions, real-time notifications, and administrative content moderation.',
     problem:
-      'University cafeteria lunch queues averaged 25–35 minutes during lecture breaks, creating delays for students and overburdens for kitchen staff.',
+      'Managing blog content, user interactions, comments, and moderation while providing a secure and engaging publishing experience.',
     solution:
-      'Created a cross-platform React Native app with Firebase Firestore for live order status feeds, offline menu caching, and instant digital receipt generation.',
-    technologies: ['React Native', 'Expo', 'Firebase Firestore', 'Node.js', 'Stripe API'],
+      'Developed a centralized blogging platform with secure authentication, content publishing, social interactions, real-time notifications, and an admin dashboard for efficient content and user management.',
+    technologies: ['PHP', 'MySQL', 'JavaScript', 'Apache', 'Git'],
     keyFeatures: [
-      'Live kitchen preparation status tracking (Queued, Cooking, Ready)',
-      'QR code generation for contactless order collection',
-      'Interactive nutritional breakdowns and dietary preference filters',
-      'Secure mock in-app checkout flow with transaction history',
+      'Secure authentication and role-based access control',
+      'Markdown-based blog creation and content management',
+      'Comments, likes, bookmarks, and user following',
+      'Real-time notifications and admin content moderation',
     ],
     contribution:
       'Led the mobile client architecture, integrated Firebase real-time listeners, and conducted usability testing with 20+ university peers.',
     role: 'Mobile Frontend Developer (Team of 4)',
     challenges:
-      'Ensuring reliable offline fallback states when mobile network connectivity drops in underground campus dining halls.',
+      'Independently designed and developed the complete blogging platform, including backend architecture, authentication, CRUD operations, notifications, security, and admin dashboard.',
     outcomes:
-      'Awarded "Best Undergraduate Software Design Project" for the semester with positive user feedback on UI responsiveness.',
-    image: '/src/assets/images/projects/project-02.jpg',
-    github: 'https://github.com/your-username/campus-dining-mobile',
-    liveDemo: 'https://expo.dev/@your-username/campus-dining',
+      'Delivered a secure, scalable blogging platform with efficient content management, user engagement, real-time notifications, and administrative control.',
+    image: project02Img,
+    github: 'https://github.com/sandevi641/Blog-Appp',
+    liveDemo: '',
   },
   {
     id: 'project-03',
@@ -111,7 +113,7 @@ export const projectsData = [
       'Managing distributed transaction consistency across separate MongoDB collections without a heavy two-phase commit overhead.',
     outcomes:
       'Handled 1,200 req/sec in benchmark tests with 0% dropped transactions and clean circuit-breaker fallback triggers.',
-    image: '/src/assets/images/projects/project-03.jpg',
+    image: project03Img,
     github: 'https://github.com/your-username/microservices-backend-engine',
     liveDemo: 'https://api-docs.example.com',
   },
@@ -144,7 +146,7 @@ export const projectsData = [
       'Handling recursive prerequisite chains and circular dependency detection during bulk course selection.',
     outcomes:
       'Demonstrated 100% prerequisite validation accuracy across 500+ test registration combinations.',
-    image: '/src/assets/images/projects/project-01.jpg',
+    image: project01Img,
     github: 'https://github.com/your-username/academic-portal-system',
     liveDemo: 'https://portal-demo.example.com',
   },
@@ -177,7 +179,7 @@ export const projectsData = [
       'Parsing unstructured bank transaction CSV exports with inconsistent date and merchant formatting.',
     outcomes:
       'Published on GitHub as open-source with 100% lighthouse performance and accessibility scores.',
-    image: '/src/assets/images/projects/project-02.jpg',
+    image: project02Img,
     github: 'https://github.com/your-username/finance-analytics-dashboard',
     liveDemo: 'https://finance-dashboard.example.com',
   },
@@ -210,7 +212,7 @@ export const projectsData = [
       'Handling GitHub API rate limits gracefully with unauthenticated token fallback prompts.',
     outcomes:
       'Used by fellow IT peers to scaffold their initial resume showcase websites.',
-    image: '/src/assets/images/projects/project-03.jpg',
+    image: project03Img,
     github: 'https://github.com/your-username/portfolio-scaffold-cli',
     liveDemo: 'https://npmjs.com/package/portfolio-scaffold-cli',
   },

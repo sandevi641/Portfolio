@@ -36,20 +36,19 @@ export const skillsData = [
   { name: 'Express.js', category: 'Backend', level: 'Advanced', highlight: true },
   { name: 'RESTful API Design', category: 'Backend', level: 'Advanced', highlight: true },
   { name: 'JWT & OAuth Auth', category: 'Backend', level: 'Intermediate', highlight: false },
-  { name: 'Spring Boot (Java)', category: 'Backend', level: 'Working Knowledge', highlight: false },
+  { name: 'PHP', category: 'Backend', level: 'Working Knowledge', highlight: false },
   { name: 'WebSocket (Socket.io)', category: 'Backend', level: 'Intermediate', highlight: false },
 
   // Databases
   { name: 'MongoDB & Mongoose', category: 'Databases', level: 'Advanced', highlight: true },
-  { name: 'MySQL & PostgreSQL', category: 'Databases', level: 'Intermediate', highlight: true },
+  { name: 'MySQL', category: 'Databases', level: 'Intermediate', highlight: true },
   { name: 'Firebase Firestore', category: 'Databases', level: 'Intermediate', highlight: false },
-  { name: 'Redis (Caching)', category: 'Databases', level: 'Working Knowledge', highlight: false },
 
   // Tools & DevOps
   { name: 'Git & GitHub', category: 'Tools & DevOps', level: 'Advanced', highlight: true },
-  { name: 'Docker & Containers', category: 'Tools & DevOps', level: 'Working Knowledge', highlight: true },
+  { name: 'Docker', category: 'Tools & DevOps', level: 'Working Knowledge', highlight: true },
   { name: 'Postman & API Testing', category: 'Tools & DevOps', level: 'Advanced', highlight: false },
-  { name: 'VS Code & Linux CLI', category: 'Tools & DevOps', level: 'Advanced', highlight: false },
-  { name: 'Vite & Webpack', category: 'Tools & DevOps', level: 'Intermediate', highlight: false },
+  { name: 'VS Code', category: 'Tools & DevOps', level: 'Advanced', highlight: false },
+  { name: 'Vite', category: 'Tools & DevOps', level: 'Intermediate', highlight: false },
   { name: 'Figma UI/UX Prototyping', category: 'Tools & DevOps', level: 'Working Knowledge', highlight: false },
 ];

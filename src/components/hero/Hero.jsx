@@ -11,47 +11,52 @@ export const Hero = () => {
         minHeight: '100vh',
         display: 'flex',
         alignItems: 'center',
-        paddingTop: 'calc(var(--nav-height) + 2rem)',
-        paddingBottom: '4rem',
+        paddingTop: 'calc(var(--nav-height) + 2.5rem)',
+        paddingBottom: '5rem',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
-      {/* Subtle Background Glow Elements */}
+      {/* Dynamic Ambient Background Glow Elements */}
       <div
+        className="glow-orb animate-float"
         style={{
-          position: 'absolute',
-          top: '15%',
-          left: '-10%',
-          width: '400px',
-          height: '400px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, var(--color-primary-glow) 0%, rgba(0,0,0,0) 70%)',
-          pointerEvents: 'none',
-          zIndex: 0,
+          top: '10%',
+          left: '-5%',
+          width: '500px',
+          height: '500px',
+          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0) 70%)',
         }}
       />
       <div
+        className="glow-orb animate-float-reverse"
         style={{
-          position: 'absolute',
           bottom: '10%',
           right: '-5%',
-          width: '450px',
-          height: '450px',
-          borderRadius: '50%',
-          background: 'radial-gradient(circle, rgba(129, 140, 248, 0.12) 0%, rgba(0,0,0,0) 70%)',
-          pointerEvents: 'none',
-          zIndex: 0,
+          width: '550px',
+          height: '550px',
+          background: 'radial-gradient(circle, rgba(129, 140, 248, 0.18) 0%, rgba(168, 85, 247, 0) 70%)',
+        }}
+      />
+      <div
+        className="glow-orb"
+        style={{
+          top: '45%',
+          left: '40%',
+          width: '350px',
+          height: '350px',
+          background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
+          opacity: 0.4,
         }}
       />
 
-      <div className="container" style={{ position: 'relative', zIndex: 1 }}>
+      <div className="container" style={{ position: 'relative', zIndex: 2 }}>
         <div
           className="hero-grid"
           style={{
             display: 'grid',
             gridTemplateColumns: '1fr',
-            gap: '3rem',
+            gap: '3.5rem',
             alignItems: 'center',
           }}
         >
@@ -71,8 +76,8 @@ export const Hero = () => {
       <style>{`
         @media (min-width: 992px) {
           .hero-grid {
-            gridTemplateColumns: 1.15fr 0.85fr !important;
-            gap: 2rem !important;
+            gridTemplateColumns: 1.12fr 0.88fr !important;
+            gap: 2.5rem !important;
           }
         }
       `}</style>

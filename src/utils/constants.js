@@ -9,7 +9,6 @@ export const NAV_LINKS = [
   { id: 'projects', label: 'Projects' },
   { id: 'education', label: 'Education' },
   { id: 'certifications', label: 'Certifications' },
-  { id: 'experience', label: 'Experience' },
   { id: 'contact', label: 'Contact' },
 ];
 

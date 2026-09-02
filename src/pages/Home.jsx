@@ -7,7 +7,6 @@ import Skills from '../components/skills/Skills';
 import Projects from '../components/projects/Projects';
 import Education from '../components/education/Education';
 import Certifications from '../components/certifications/Certifications';
-import Experience from '../components/experience/Experience';
 import Contact from '../components/contact/Contact';
 import ScrollToTop from '../components/common/ScrollToTop';
 
@@ -22,7 +21,6 @@ export const Home = () => {
         <Projects />
         <Education />
         <Certifications />
-        <Experience />
         <Contact />
       </main>
       <Footer />

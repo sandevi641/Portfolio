@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, FileDown, Sparkles } from 'lucide-react';
+import { ArrowRight, FileDown, Sparkles, Code2 } from 'lucide-react';
 import { portfolioData } from '../../data/portfolio';
 import { scrollToSection } from '../../utils/helpers';
 import Button from '../common/Button';
@@ -8,6 +8,8 @@ import SocialLinks from '../common/SocialLinks';
 export const HeroContent = () => {
   const { personal, availability, resume } = portfolioData;
 
+  const quickSkills = ['React', 'Node.js', 'Express', 'MongoDB', 'SQL', 'TypeScript'];
+
   return (
     <div
       className="hero-content"
@@ -15,8 +17,8 @@ export const HeroContent = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap: '1.25rem',
-        maxWidth: '620px',
+        gap: '1.4rem',
+        maxWidth: '640px',
       }}
     >
       {/* Availability / Status Badge */}
@@ -24,9 +26,11 @@ export const HeroContent = () => {
         <div
           className="badge badge-success animate-fade-in"
           style={{
-            padding: '0.4rem 0.9rem',
+            padding: '0.45rem 1rem',
             fontSize: '0.8125rem',
-            boxShadow: '0 2px 8px rgba(16, 185, 129, 0.15)',
+            boxShadow: '0 2px 12px rgba(16, 185, 129, 0.2)',
+            border: '1px solid rgba(16, 185, 129, 0.35)',
+            gap: '0.5rem',
           }}
         >
           <span
@@ -38,57 +42,69 @@ export const HeroContent = () => {
             }}
             className="animate-pulse-dot"
           />
-          <span>{availability.text}</span>
+          <span style={{ fontWeight: 600 }}>{availability.text}</span>
         </div>
       )}
 
       {/* Greeting & Headline */}
       <div>
-        <span
+        <div
           style={{
             fontFamily: 'var(--font-mono)',
-            fontSize: '1rem',
+            fontSize: '1.05rem',
             color: 'var(--color-primary)',
             fontWeight: 600,
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.5rem',
             marginBottom: '0.5rem',
+            letterSpacing: '0.02em',
           }}
         >
           <Sparkles size={16} />
-          Hi, I am
-        </span>
+          <span>Hi, I'm</span>
+        </div>
+        
         <h1
           style={{
-            fontSize: 'clamp(2.5rem, 5vw, 3.75rem)',
+            fontSize: 'clamp(1.85rem, 3.5vw, 2.6rem)',
             fontWeight: 800,
-            lineHeight: 1.1,
-            color: 'var(--color-text-primary)',
-            letterSpacing: '-0.03em',
+            lineHeight: 1.15,
+            letterSpacing: '-0.025em',
             marginBottom: '0.65rem',
           }}
         >
-          {personal.name}
+          <span className="text-gradient">{personal.name}</span>
         </h1>
+        
         <h2
           style={{
-            fontSize: 'clamp(1.25rem, 2.5vw, 1.75rem)',
+            fontSize: 'clamp(1.2rem, 2.4vw, 1.65rem)',
             fontWeight: 600,
-            color: 'var(--color-text-secondary)',
-            lineHeight: 1.3,
+            color: 'var(--color-text-primary)',
+            lineHeight: 1.35,
+            display: 'flex',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '0.5rem',
           }}
         >
-          {personal.title}
+          <span>{personal.title}</span>
         </h2>
+        
         <p
           style={{
             fontFamily: 'var(--font-mono)',
             fontSize: '0.925rem',
-            color: 'var(--color-primary)',
-            marginTop: '0.35rem',
+            color: 'var(--color-secondary)',
+            fontWeight: 500,
+            marginTop: '0.4rem',
+            display: 'inline-flex',
+            alignItems: 'center',
+            gap: '0.4rem',
           }}
         >
+          <Code2 size={16} />
           {personal.subtitle}
         </p>
       </div>
@@ -98,11 +114,49 @@ export const HeroContent = () => {
         style={{
           fontSize: '1.0625rem',
           color: 'var(--color-text-secondary)',
-          lineHeight: 1.65,
+          lineHeight: 1.7,
         }}
       >
         {portfolioData.about.introduction}
       </p>
+
+      {/* Quick Stack Badges */}
+      <div
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          alignItems: 'center',
+          gap: '0.5rem',
+        }}
+      >
+        <span
+          style={{
+            fontSize: '0.75rem',
+            fontFamily: 'var(--font-mono)',
+            textTransform: 'uppercase',
+            color: 'var(--color-text-muted)',
+            fontWeight: 600,
+            marginRight: '0.25rem',
+          }}
+        >
+          Core Stack:
+        </span>
+        {quickSkills.map((skill) => (
+          <span
+            key={skill}
+            className="badge"
+            style={{
+              fontSize: '0.75rem',
+              fontFamily: 'var(--font-mono)',
+              padding: '0.2rem 0.6rem',
+              backgroundColor: 'var(--color-surface)',
+              borderColor: 'var(--color-border)',
+            }}
+          >
+            {skill}
+          </span>
+        ))}
+      </div>
 
       {/* CTA Action Buttons */}
       <div
@@ -110,7 +164,7 @@ export const HeroContent = () => {
           display: 'flex',
           flexWrap: 'wrap',
           gap: '1rem',
-          marginTop: '0.5rem',
+          marginTop: '0.25rem',
         }}
       >
         <Button
@@ -119,7 +173,7 @@ export const HeroContent = () => {
           icon={ArrowRight}
           iconPosition="right"
         >
-          View My Projects
+          Explore Projects
         </Button>
 
         <Button
@@ -139,19 +193,20 @@ export const HeroContent = () => {
           display: 'flex',
           alignItems: 'center',
           gap: '1rem',
-          marginTop: '0.75rem',
+          marginTop: '0.5rem',
         }}
       >
         <span
           style={{
-            fontSize: '0.85rem',
+            fontSize: '0.8rem',
+            fontFamily: 'var(--font-mono)',
             fontWeight: 600,
             color: 'var(--color-text-muted)',
             textTransform: 'uppercase',
-            letterSpacing: '0.05em',
+            letterSpacing: '0.08em',
           }}
         >
-          Connect:
+          Find Me:
         </span>
         <SocialLinks iconSize={18} />
       </div>

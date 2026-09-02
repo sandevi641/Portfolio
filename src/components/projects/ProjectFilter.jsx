@@ -7,7 +7,7 @@ export const ProjectFilter = ({ categories, activeFilter, onSelectFilter }) => {
         display: 'flex',
         flexWrap: 'wrap',
         justifyContent: 'center',
-        gap: '0.6rem',
+        gap: '0.65rem',
         marginBottom: '3rem',
       }}
     >
@@ -21,9 +21,13 @@ export const ProjectFilter = ({ categories, activeFilter, onSelectFilter }) => {
             className={`btn btn-sm ${isActive ? 'btn-primary' : 'btn-secondary'}`}
             style={{
               borderRadius: 'var(--border-radius-full)',
-              padding: '0.45rem 1.1rem',
-              fontSize: '0.875rem',
-              fontWeight: isActive ? 600 : 500,
+              padding: '0.5rem 1.25rem',
+              fontSize: '0.85rem',
+              fontWeight: isActive ? 700 : 500,
+              boxShadow: isActive
+                ? '0 4px 15px var(--color-primary-glow)'
+                : 'none',
+              transition: 'all var(--transition-fast)',
             }}
           >
             {category}

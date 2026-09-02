@@ -21,9 +21,13 @@ export const SkillCategory = ({ categories, activeCategory, onSelectCategory }) 
             className={`btn btn-sm ${isActive ? 'btn-primary' : 'btn-secondary'}`}
             style={{
               borderRadius: 'var(--border-radius-full)',
-              padding: '0.45rem 1rem',
+              padding: '0.5rem 1.15rem',
               fontSize: '0.85rem',
-              fontWeight: isActive ? 600 : 500,
+              fontWeight: isActive ? 700 : 500,
+              boxShadow: isActive
+                ? '0 4px 15px var(--color-primary-glow)'
+                : 'none',
+              transition: 'all var(--transition-fast)',
             }}
           >
             {category}

@@ -11,24 +11,28 @@ export const Statistics = () => {
       label: 'Projects Built',
       value: statistics.projects,
       icon: FolderGit2,
+      color: 'var(--color-primary)',
     },
     {
       id: 'technologies',
       label: 'Technologies',
       value: statistics.technologies,
       icon: Cpu,
+      color: 'var(--color-secondary)',
     },
     {
       id: 'learningExperience',
       label: 'Years Learning',
       value: statistics.learningExperience,
       icon: Hourglass,
+      color: 'var(--color-accent)',
     },
     {
       id: 'certifications',
       label: 'Certifications',
       value: statistics.certifications,
       icon: Award,
+      color: 'var(--color-success)',
     },
   ];
 
@@ -38,7 +42,7 @@ export const Statistics = () => {
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
         gap: '1rem',
-        marginTop: '2rem',
+        marginTop: '2.5rem',
       }}
     >
       {stats.map((item) => {
@@ -48,41 +52,53 @@ export const Statistics = () => {
             key={item.id}
             className="card-base"
             style={{
-              padding: '1.25rem 1rem',
+              padding: '1.4rem 1rem',
               textAlign: 'center',
               display: 'flex',
               flexDirection: 'column',
               alignItems: 'center',
               justifyContent: 'center',
               backgroundColor: 'var(--color-surface)',
+              position: 'relative',
             }}
           >
             <div
               style={{
-                color: 'var(--color-primary)',
-                marginBottom: '0.5rem',
-                opacity: 0.9,
+                color: item.color,
+                marginBottom: '0.6rem',
+                opacity: 0.95,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                width: '38px',
+                height: '38px',
+                borderRadius: '50%',
+                backgroundColor: 'rgba(255, 255, 255, 0.04)',
               }}
             >
-              <Icon size={22} />
+              <Icon size={20} />
             </div>
+            
             <span
               style={{
-                fontSize: '1.5rem',
+                fontSize: '1.75rem',
                 fontWeight: 800,
-                color: 'var(--color-text-primary)',
                 fontFamily: 'var(--font-mono)',
-                lineHeight: 1.2,
+                lineHeight: 1.15,
+                letterSpacing: '-0.02em',
               }}
+              className="text-gradient"
             >
               {item.value}
             </span>
+            
             <span
               style={{
                 fontSize: '0.8rem',
                 color: 'var(--color-text-muted)',
-                marginTop: '0.25rem',
-                fontWeight: 500,
+                marginTop: '0.35rem',
+                fontWeight: 600,
+                fontFamily: 'var(--font-sans)',
               }}
             >
               {item.label}

@@ -13,7 +13,7 @@ export const Certifications = () => {
           <SectionTitle
             tag="Certifications"
             title="Industry Recognized Certifications"
-            subtitle="Specialized credentials validating practical competence in cloud infrastructure, front-end architecture, and backend engineering."
+            subtitle="Verified industry credentials validating practical competencies in data analysis, SQL database design, and modern full-stack development."
           />
 
           <div
