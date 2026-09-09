@@ -34,9 +34,9 @@ export const Hero = () => {
         className="glow-orb animate-float"
         style={{
           top: '8%',
-          left: '-5%',
-          width: '520px',
-          height: '520px',
+          left: '0%',
+          width: 'clamp(280px, 45vw, 520px)',
+          height: 'clamp(280px, 45vw, 520px)',
           background: 'radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0) 70%)',
         }}
       />
@@ -44,9 +44,9 @@ export const Hero = () => {
         className="glow-orb animate-float-reverse"
         style={{
           bottom: '8%',
-          right: '-5%',
-          width: '550px',
-          height: '550px',
+          right: '0%',
+          width: 'clamp(280px, 45vw, 550px)',
+          height: 'clamp(280px, 45vw, 550px)',
           background: 'radial-gradient(circle, rgba(129, 140, 248, 0.18) 0%, rgba(168, 85, 247, 0) 70%)',
         }}
       />
@@ -55,8 +55,8 @@ export const Hero = () => {
         style={{
           top: '35%',
           left: '42%',
-          width: '380px',
-          height: '380px',
+          width: 'clamp(200px, 30vw, 380px)',
+          height: 'clamp(200px, 30vw, 380px)',
           background: 'radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, transparent 70%)',
           opacity: 0.5,
         }}

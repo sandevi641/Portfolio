@@ -70,31 +70,29 @@ export const DeveloperCard = () => {
 
   const tsCodeLines = [
     { num: 1, code: '<span style="color: #818cf8">const</span> <span style="color: #38bdf8">developer</span>: <span style="color: #f59e0b">SoftwareEngineer</span> = {' },
-    { num: 2, code: '  <span style="color: #94a3b8">name:</span> <span style="color: #34d399">"' + personal.name + '"</span>,' },
-    { num: 3, code: '  <span style="color: #94a3b8">institution:</span> <span style="color: #34d399">"' + about.university + '"</span>,' },
-    { num: 4, code: '  <span style="color: #94a3b8">degree:</span> <span style="color: #34d399">"' + about.degree + '"</span>,' },
-    { num: 5, code: '  <span style="color: #94a3b8">role:</span> <span style="color: #34d399">"IT Undergraduate & Software Engineer"</span>,' },
+    { num: 2, code: '  <span style="color: #94a3b8">name:</span> <span style="color: #34d399">"Sandevi de Silva"</span>,' },
+    { num: 3, code: '  <span style="color: #94a3b8">university:</span> <span style="color: #34d399">"Univ. of Moratuwa"</span>,' },
+    { num: 4, code: '  <span style="color: #94a3b8">degree:</span> <span style="color: #34d399">"B.Sc. (Hons) ITM"</span>,' },
+    { num: 5, code: '  <span style="color: #94a3b8">role:</span> <span style="color: #34d399">"Full-Stack Developer"</span>,' },
     { num: 6, code: '  <span style="color: #94a3b8">seekingInternship:</span> <span style="color: #c084fc">true</span>,' },
-    { num: 7, code: '  <span style="color: #94a3b8">status:</span> <span style="color: #10b981; font-weight: 600">"' + availability.text + '"</span>,' },
-    { num: 8, code: '  <span style="color: #94a3b8">coreStack:</span> [<span style="color: #f59e0b">"React"</span>, <span style="color: #f59e0b">"Node.js"</span>, <span style="color: #f59e0b">"TypeScript"</span>, <span style="color: #f59e0b">"MongoDB"</span>],' },
+    { num: 7, code: '  <span style="color: #94a3b8">status:</span> <span style="color: #10b981; font-weight: 600">"Available for Hire"</span>,' },
+    { num: 8, code: '  <span style="color: #94a3b8">stack:</span> [<span style="color: #f59e0b">"React"</span>, <span style="color: #f59e0b">"Node"</span>, <span style="color: #f59e0b">"TS"</span>, <span style="color: #f59e0b">"MongoDB"</span>],' },
     { num: 9, code: '  <span style="color: #94a3b8">location:</span> <span style="color: #34d399">"Colombo, Sri Lanka"</span>,' },
-    { num: 10, code: '  <span style="color: #94a3b8">contact:</span> () => <span style="color: #38bdf8">connectViaWhatsApp</span>()' },
+    { num: 10, code: '  <span style="color: #94a3b8">contact:</span> () => <span style="color: #38bdf8">openWhatsApp</span>()' },
     { num: 11, code: '};' },
   ];
 
   const jsonCodeLines = [
     { num: 1, code: '{' },
-    { num: 2, code: '  <span style="color: #38bdf8">"developer"</span>: <span style="color: #34d399">"' + personal.name + '"</span>,' },
-    { num: 3, code: '  <span style="color: #38bdf8">"university"</span>: <span style="color: #34d399">"' + about.university + '"</span>,' },
-    { num: 4, code: '  <span style="color: #38bdf8">"stack"</span>: {' },
-    { num: 5, code: '    <span style="color: #818cf8">"frontend"</span>: [<span style="color: #34d399">"React"</span>, <span style="color: #34d399">"JavaScript (ES6+)"</span>, <span style="color: #34d399">"TypeScript"</span>],' },
-    { num: 6, code: '    <span style="color: #818cf8">"backend"</span>: [<span style="color: #34d399">"Node.js"</span>, <span style="color: #34d399">"Express.js"</span>, <span style="color: #34d399">"REST APIs"</span>],' },
-    { num: 7, code: '    <span style="color: #818cf8">"databases"</span>: [<span style="color: #34d399">"MongoDB"</span>, <span style="color: #34d399">"MySQL"</span>, <span style="color: #34d399">"PostgreSQL"</span>],' },
-    { num: 8, code: '    <span style="color: #818cf8">"tools"</span>: [<span style="color: #34d399">"Git"</span>, <span style="color: #34d399">"GitHub"</span>, <span style="color: #34d399">"Docker"</span>, <span style="color: #34d399">"Vite"</span>, <span style="color: #34d399">"Postman"</span>]' },
-    { num: 9, code: '  },' },
-    { num: 10, code: '  <span style="color: #38bdf8">"availableForHire"</span>: <span style="color: #c084fc">true</span>,' },
-    { num: 11, code: '  <span style="color: #38bdf8">"targetGraduation"</span>: <span style="color: #34d399">"2027"</span>' },
-    { num: 12, code: '}' },
+    { num: 2, code: '  <span style="color: #38bdf8">"developer"</span>: <span style="color: #34d399">"Sandevi de Silva"</span>,' },
+    { num: 3, code: '  <span style="color: #38bdf8">"university"</span>: <span style="color: #34d399">"Univ. of Moratuwa"</span>,' },
+    { num: 4, code: '  <span style="color: #38bdf8">"frontend"</span>: [<span style="color: #34d399">"React"</span>, <span style="color: #34d399">"TypeScript"</span>],' },
+    { num: 5, code: '  <span style="color: #38bdf8">"backend"</span>: [<span style="color: #34d399">"Node.js"</span>, <span style="color: #34d399">"Express"</span>],' },
+    { num: 6, code: '  <span style="color: #38bdf8">"databases"</span>: [<span style="color: #34d399">"MongoDB"</span>, <span style="color: #34d399">"MySQL"</span>],' },
+    { num: 7, code: '  <span style="color: #38bdf8">"tools"</span>: [<span style="color: #34d399">"Git"</span>, <span style="color: #34d399">"Docker"</span>, <span style="color: #34d399">"Vite"</span>],' },
+    { num: 8, code: '  <span style="color: #38bdf8">"availableForHire"</span>: <span style="color: #c084fc">true</span>,' },
+    { num: 9, code: '  <span style="color: #38bdf8">"targetYear"</span>: <span style="color: #34d399">"2026/2027"</span>' },
+    { num: 10, code: '}' },
   ];
 
   const handleCopy = () => {
