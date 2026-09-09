@@ -33,7 +33,7 @@ export const educationData = [
     degree: ' Diploma in Information Technology',
     university: '[Esoft Metro Campus]',
     faculty: 'Information Technology',
-    location: '[Colombo, Sri Lanka]',
+    location: 'Colombo, Sri Lanka',
     duration: '2023 – 2024',
     currentYear: 'Completed',
     status: 'Graduated',
@@ -50,6 +50,27 @@ export const educationData = [
     ],
     achievements: [
 
+    ],
+  },
+  {
+    id: 'edu-03',
+    degree: 'G.C.E. Advanced Level (Physical Science)',
+    university: 'Kegalle Balika Vidhyalaya',
+    faculty: 'Physical Science',
+    location: 'Kegalle, Sri Lanka',
+    duration: '2021 – 2023',
+    currentYear: 'Completed',
+    status: 'Graduated',
+    gpa: '',
+    description:
+      'Completed G.C.E. Advanced Level education in the Physical Science stream.',
+    coursework: [
+      'Combined Mathematics',
+      'Physics',
+      'Chemistry',
+    ],
+    achievements: [
+      // Add your A/L results or achievements here
     ],
   },
 ];
