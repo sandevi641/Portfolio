@@ -15,6 +15,7 @@ export const portfolioData = {
     location: "Colombo, Sri Lanka",
     email: "san20020803@gmail.com", // [YOUR EMAIL]
     phone: "0702872524", // [YOUR PHONE]
+    whatsapp: "94702872524", // International format for wa.me links
     profileImage: "/images/profile/profile-placeholder.png",
   },
 
@@ -28,6 +29,7 @@ export const portfolioData = {
     github: "https://github.com/sandevi641", // [YOUR GITHUB URL]
     linkedin: "https://www.linkedin.com/in/sandevi-ayodhya-873376269?utm_source=share_via&utm_content=profile&utm_medium=member_ios", // [YOUR LINKEDIN URL]
     email: "san20020803@gmail.com", // [YOUR EMAIL LINK]
+    whatsapp: "https://wa.me/94702872524", // [YOUR WHATSAPP LINK]
   },
 
   resume: {

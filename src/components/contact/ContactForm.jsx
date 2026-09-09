@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { validateContactForm } from '../../utils/validation';
+import { portfolioData } from '../../data/portfolio';
+import { WhatsAppIcon } from '../common/Icons';
 import Button from '../common/Button';
 
 export const ContactForm = () => {
@@ -24,7 +26,7 @@ export const ContactForm = () => {
     }
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // 1. Validate Form
@@ -36,27 +38,36 @@ export const ContactForm = () => {
 
     setErrors({});
     setStatus('sending');
+    setStatusMessage('Preparing your message for WhatsApp...');
 
     try {
-      /**
-       * Note: Connect your preferred email provider API here (e.g. EmailJS, Formspree, Resend, or custom backend).
-       * Example:
-       * await emailjs.send('service_id', 'template_id', formData, 'public_key');
-       */
-      await new Promise((resolve) => setTimeout(resolve, 1200)); // Simulated network transmission
+      const whatsappNumber = portfolioData.personal.whatsapp || '94702872524';
+      const formattedMessage = `Hello Sandevi,
+
+*Name:* ${formData.name.trim()}
+*Email:* ${formData.email.trim()}
+*Subject:* ${formData.subject.trim()}
+
+*Message:*
+${formData.message.trim()}`;
+
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(formattedMessage)}`;
+
+      // Open WhatsApp link in a new tab
+      window.open(whatsappUrl, '_blank', 'noopener,noreferrer');
 
       setStatus('success');
-      setStatusMessage('Thank you! Your message has been prepared/sent successfully. I will get back to you promptly.');
+      setStatusMessage('WhatsApp chat opened with your message! Click send in WhatsApp to deliver it directly.');
       setFormData({ name: '', email: '', subject: '', message: '' });
 
       setTimeout(() => {
         setStatus('idle');
         setStatusMessage('');
-      }, 6000);
+      }, 8000);
     } catch (err) {
-      console.error('Contact form submission error:', err);
+      console.error('WhatsApp redirect error:', err);
       setStatus('error');
-      setStatusMessage('Something went wrong transmitting your message. Please reach out directly via email.');
+      setStatusMessage('Could not open WhatsApp automatically. Please reach out directly via WhatsApp or Email.');
     }
   };
 
@@ -251,11 +262,11 @@ export const ContactForm = () => {
           type="submit"
           variant="primary"
           disabled={status === 'sending'}
-          icon={status === 'sending' ? Loader2 : Send}
+          icon={status === 'sending' ? Loader2 : WhatsAppIcon}
           iconPosition="right"
           style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}
         >
-          {status === 'sending' ? 'Sending Message...' : 'Send Message'}
+          {status === 'sending' ? 'Opening WhatsApp...' : 'Send Message via WhatsApp'}
         </Button>
       </form>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Mail } from 'lucide-react';
-import { GithubIcon, LinkedinIcon, TwitterIcon } from './Icons';
+import { GithubIcon, LinkedinIcon, TwitterIcon, WhatsAppIcon } from './Icons';
 import { portfolioData } from '../../data/portfolio';
 
 /**
@@ -21,6 +21,12 @@ export const SocialLinks = ({ className = '', iconSize = 18 }) => {
       url: social.linkedin,
       icon: LinkedinIcon,
       show: Boolean(social.linkedin),
+    },
+    {
+      name: 'WhatsApp',
+      url: social.whatsapp,
+      icon: WhatsAppIcon,
+      show: Boolean(social.whatsapp),
     },
     {
       name: 'Email',

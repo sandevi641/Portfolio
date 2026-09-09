@@ -15,23 +15,35 @@ export const Hero = () => {
         paddingBottom: '5rem',
         position: 'relative',
         overflow: 'hidden',
+        backgroundImage: 'radial-gradient(rgba(56, 189, 248, 0.08) 1.2px, transparent 1.2px)',
+        backgroundSize: '28px 28px',
       }}
     >
+      {/* High-tech radial gradient vignette */}
+      <div
+        style={{
+          position: 'absolute',
+          inset: 0,
+          background: 'radial-gradient(circle at 50% 40%, transparent 20%, var(--color-bg-primary) 85%)',
+          pointerEvents: 'none',
+        }}
+      />
+
       {/* Dynamic Ambient Background Glow Elements */}
       <div
         className="glow-orb animate-float"
         style={{
-          top: '10%',
+          top: '8%',
           left: '-5%',
-          width: '500px',
-          height: '500px',
-          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.22) 0%, rgba(56, 189, 248, 0) 70%)',
+          width: '520px',
+          height: '520px',
+          background: 'radial-gradient(circle, rgba(56, 189, 248, 0.2) 0%, rgba(56, 189, 248, 0) 70%)',
         }}
       />
       <div
         className="glow-orb animate-float-reverse"
         style={{
-          bottom: '10%',
+          bottom: '8%',
           right: '-5%',
           width: '550px',
           height: '550px',
@@ -41,12 +53,12 @@ export const Hero = () => {
       <div
         className="glow-orb"
         style={{
-          top: '45%',
-          left: '40%',
-          width: '350px',
-          height: '350px',
-          background: 'radial-gradient(circle, rgba(16, 185, 129, 0.08) 0%, transparent 70%)',
-          opacity: 0.4,
+          top: '35%',
+          left: '42%',
+          width: '380px',
+          height: '380px',
+          background: 'radial-gradient(circle, rgba(16, 185, 129, 0.07) 0%, transparent 70%)',
+          opacity: 0.5,
         }}
       />
 
