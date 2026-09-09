@@ -268,22 +268,34 @@ export const DeveloperCard = () => {
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0.65rem 0.85rem',
+            padding: '0.55rem 0.75rem',
             backgroundColor: 'rgba(0, 0, 0, 0.65)',
             borderBottom: '1px solid var(--color-border)',
-            gap: '0.5rem',
-            overflowX: 'auto',
+            gap: '0.4rem',
+            width: '100%',
+            boxSizing: 'border-box',
           }}
         >
           {/* Window controls and tabs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexShrink: 0 }}>
-            <div style={{ display: 'flex', gap: '0.4rem', marginRight: '0.15rem' }}>
-              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#ef4444' }} />
-              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
-              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#10b981' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.45rem', flex: 1, minWidth: 0 }}>
+            <div style={{ display: 'flex', gap: '0.35rem', flexShrink: 0, marginRight: '0.1rem' }}>
+              <span style={{ width: '9px', height: '9px', borderRadius: '50%', backgroundColor: '#ef4444' }} />
+              <span style={{ width: '9px', height: '9px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
+              <span style={{ width: '9px', height: '9px', borderRadius: '50%', backgroundColor: '#10b981' }} />
             </div>
             
-            <div className="developer-card-tabs" style={{ display: 'flex', gap: '0.3rem' }}>
+            <div
+              className="developer-card-tabs"
+              style={{
+                display: 'flex',
+                gap: '0.25rem',
+                overflowX: 'auto',
+                flex: 1,
+                minWidth: 0,
+                scrollbarWidth: 'none',
+                WebkitOverflowScrolling: 'touch',
+              }}
+            >
               <button
                 type="button"
                 onClick={() => setActiveTab('developer.ts')}
@@ -291,19 +303,20 @@ export const DeveloperCard = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.3rem',
-                  padding: '0.22rem 0.55rem',
+                  padding: '0.2rem 0.5rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'developer.ts' ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
                   border: activeTab === 'developer.ts' ? '1px solid rgba(56, 189, 248, 0.35)' : '1px solid transparent',
                   color: activeTab === 'developer.ts' ? 'var(--color-primary)' : 'var(--color-text-muted)',
-                  fontSize: '0.75rem',
+                  fontSize: '0.72rem',
                   fontWeight: 600,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
+                  flexShrink: 0,
                   transition: 'all var(--transition-fast)',
                 }}
               >
-                <FileCode size={13} />
+                <FileCode size={12} />
                 <span>developer.ts</span>
               </button>
 
@@ -314,19 +327,20 @@ export const DeveloperCard = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.3rem',
-                  padding: '0.22rem 0.55rem',
+                  padding: '0.2rem 0.5rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'stack.json' ? 'rgba(129, 140, 248, 0.15)' : 'transparent',
                   border: activeTab === 'stack.json' ? '1px solid rgba(129, 140, 248, 0.35)' : '1px solid transparent',
                   color: activeTab === 'stack.json' ? 'var(--color-secondary)' : 'var(--color-text-muted)',
-                  fontSize: '0.75rem',
+                  fontSize: '0.72rem',
                   fontWeight: 600,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
+                  flexShrink: 0,
                   transition: 'all var(--transition-fast)',
                 }}
               >
-                <Layers size={13} />
+                <Layers size={12} />
                 <span>stack.json</span>
               </button>
 
@@ -337,35 +351,36 @@ export const DeveloperCard = () => {
                   display: 'inline-flex',
                   alignItems: 'center',
                   gap: '0.3rem',
-                  padding: '0.22rem 0.55rem',
+                  padding: '0.2rem 0.5rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'terminal.sh' ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
                   border: activeTab === 'terminal.sh' ? '1px solid rgba(16, 185, 129, 0.35)' : '1px solid transparent',
                   color: activeTab === 'terminal.sh' ? 'var(--color-success)' : 'var(--color-text-muted)',
-                  fontSize: '0.75rem',
+                  fontSize: '0.72rem',
                   fontWeight: 600,
                   cursor: 'pointer',
                   whiteSpace: 'nowrap',
+                  flexShrink: 0,
                   transition: 'all var(--transition-fast)',
                 }}
               >
-                <Terminal size={13} />
+                <Terminal size={12} />
                 <span>terminal.sh</span>
               </button>
             </div>
           </div>
 
           {/* Right Header Bar: Live Clock & Copy button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.4rem', flexShrink: 0 }}>
             {currentTime && (
               <span
                 className="hide-mobile"
                 style={{
-                  fontSize: '0.7rem',
+                  fontSize: '0.68rem',
                   color: 'var(--color-text-muted)',
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.3rem',
+                  gap: '0.25rem',
                 }}
                 title="Sri Lanka Local Time (Asia/Colombo)"
               >
@@ -383,18 +398,19 @@ export const DeveloperCard = () => {
                 color: copied ? 'var(--color-success)' : 'var(--color-text-muted)',
                 display: 'flex',
                 alignItems: 'center',
-                gap: '0.35rem',
-                fontSize: '0.75rem',
-                padding: '0.22rem 0.55rem',
+                gap: '0.3rem',
+                fontSize: '0.72rem',
+                padding: '0.2rem 0.5rem',
                 borderRadius: 'var(--border-radius-xs)',
                 backgroundColor: copied ? 'var(--color-success-bg)' : 'rgba(255, 255, 255, 0.04)',
                 border: copied ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid var(--color-border)',
                 transition: 'all var(--transition-fast)',
                 cursor: 'pointer',
                 whiteSpace: 'nowrap',
+                flexShrink: 0,
               }}
             >
-              {copied ? <Check size={13} /> : <Copy size={13} />}
+              {copied ? <Check size={12} /> : <Copy size={12} />}
               <span>{copied ? 'Copied' : 'Copy'}</span>
             </button>
           </div>

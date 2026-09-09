@@ -29,7 +29,7 @@ export const ScrollToTop = () => {
   return (
     <button
       onClick={scrollToTop}
-      className="btn btn-primary"
+      className="btn btn-primary scroll-to-top-btn"
       style={{
         position: 'fixed',
         bottom: '2rem',
@@ -44,7 +44,7 @@ export const ScrollToTop = () => {
       aria-label="Scroll to top"
       title="Back to top"
     >
-      <ArrowUp size={20} />
+      <ArrowUp size={18} />
     </button>
   );
 };

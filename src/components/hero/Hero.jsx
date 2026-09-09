@@ -78,6 +78,9 @@ export const Hero = () => {
               display: 'flex',
               justifyContent: 'center',
               width: '100%',
+              maxWidth: '100%',
+              overflow: 'hidden',
+              boxSizing: 'border-box',
             }}
           >
             <DeveloperCard />
