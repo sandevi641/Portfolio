@@ -5,6 +5,7 @@ import { educationData } from '../../data/education';
 export const EducationTimeline = () => {
   return (
     <div
+      className="education-timeline-wrapper"
       style={{
         position: 'relative',
         maxWidth: '860px',
@@ -16,6 +17,7 @@ export const EducationTimeline = () => {
       {educationData.map((item, index) => (
         <div
           key={item.id}
+          className="timeline-item"
           style={{
             position: 'relative',
             marginBottom: index === educationData.length - 1 ? 0 : '3.5rem',
@@ -24,6 +26,7 @@ export const EducationTimeline = () => {
         >
           {/* Glowing Timeline Node */}
           <div
+            className="timeline-node"
             style={{
               position: 'absolute',
               left: '-2.45rem',

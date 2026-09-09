@@ -265,6 +265,7 @@ export const HeroContent = () => {
 
       {/* CTA Action Buttons */}
       <div
+        className="hero-cta-group"
         style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -330,6 +331,7 @@ export const HeroContent = () => {
 
       {/* Quick Metrics Bar */}
       <div
+        className="quick-metrics-grid"
         style={{
           display: 'grid',
           gridTemplateColumns: 'repeat(auto-fit, minmax(110px, 1fr))',

@@ -86,8 +86,8 @@ export const Projects = () => {
               viewMode === 'grid'
                 ? {
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fill, minmax(340px, 1fr))',
-                    gap: '2rem',
+                    gridTemplateColumns: 'repeat(auto-fill, minmax(min(100%, 300px), 1fr))',
+                    gap: '1.75rem',
                   }
                 : {
                     display: 'flex',

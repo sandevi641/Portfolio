@@ -174,7 +174,7 @@ export const DeveloperCard = () => {
     <div style={{ position: 'relative', width: '100%', maxWidth: '560px' }}>
       {/* Floating Dynamic Orbit Badge 1 (Top-Right) */}
       <div
-        className="animate-float"
+        className="animate-float developer-card-badge-top"
         style={{
           position: 'absolute',
           top: '-15px',
@@ -201,7 +201,7 @@ export const DeveloperCard = () => {
 
       {/* Floating Dynamic Orbit Badge 2 (Bottom-Left) */}
       <div
-        className="animate-float-reverse"
+        className="animate-float-reverse developer-card-badge-bottom"
         style={{
           position: 'absolute',
           bottom: '-14px',

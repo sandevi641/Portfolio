@@ -343,9 +343,180 @@ input, textarea, select {
   color: var(--color-success);
 }
 
-/* Certificate Image Preview */
-.certificate-image-container:hover .certificate-thumb-img {
-  transform: scale(1.05);
+/* Responsive Global Adjustments & Mobile Optimization */
+@media (max-width: 960px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 3rem !important;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --container-padding: 1.15rem;
+    --section-padding: 4.25rem 0;
+    --nav-height: 4.25rem;
+  }
+
+  .section-title {
+    font-size: 1.85rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.95rem !important;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem !important;
+  }
+
+  .card-base {
+    padding: 1.25rem;
+  }
+
+  /* Prevent horizontal overflows from floats & animations */
+  .hero-section {
+    padding-top: calc(var(--nav-height) + 1.25rem) !important;
+    padding-bottom: 3.5rem !important;
+  }
+
+  .developer-card-container {
+    max-width: 100% !important;
+    margin: 0 auto;
+  }
+
+  .hero-grid {
+    gap: 2.25rem !important;
+  }
+
+  .modal-backdrop {
+    padding: 0.65rem !important;
+  }
+
+  .modal-content {
+    max-height: 94vh !important;
+    border-radius: var(--border-radius) !important;
+  }
+}
+
+@media (max-width: 580px) {
+  :root {
+    --container-padding: 1rem;
+    --section-padding: 3.5rem 0;
+    --nav-height: 4rem;
+  }
+
+  .section-title {
+    font-size: 1.6rem !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  .section-tag {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.85rem !important;
+  }
+
+  .btn {
+    padding: 0.65rem 1.15rem;
+    font-size: 0.875rem;
+  }
+
+  .hide-mobile {
+    display: none !important;
+  }
+
+  /* Developer Card Mobile Polishing */
+  .developer-card-badge-top {
+    top: -10px !important;
+    right: 0 !important;
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.65rem !important;
+  }
+
+  .developer-card-badge-bottom {
+    bottom: -10px !important;
+    left: 0 !important;
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.65rem !important;
+  }
+
+  /* Quick Metrics Grid 2x2 */
+  .quick-metrics-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.65rem !important;
+    padding: 0.75rem 0.9rem !important;
+  }
+
+  /* Hero CTA Buttons */
+  .hero-cta-group {
+    flex-direction: column !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .hero-cta-group .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
+
+  /* Education Timeline Mobile */
+  .education-timeline-wrapper {
+    padding-left: 1.15rem !important;
+  }
+
+  .education-timeline-wrapper .timeline-node {
+    left: -1.8rem !important;
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .education-timeline-wrapper .timeline-item {
+    padding-left: 0.85rem !important;
+    margin-bottom: 2.25rem !important;
+  }
+
+  /* Project Card List View to Stack on Mobile */
+  .project-card-list-view {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+
+  .project-card-list-view .project-card-actions {
+    width: 100% !important;
+    justify-content: space-between !important;
+    margin-top: 0.5rem !important;
+  }
+
+  /* Statistics 2x2 Grid */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+}
+
+@media (max-width: 420px) {
+  :root {
+    --container-padding: 0.85rem;
+  }
+
+  .section-title {
+    font-size: 1.45rem !important;
+  }
+
+  .card-base {
+    padding: 1.1rem 0.85rem;
+    border-radius: var(--border-radius);
+  }
+
+  .developer-card-badge-top,
+  .developer-card-badge-bottom {
+    display: none !important;
+  }
+
+  .modal-backdrop {
+    padding: 0.4rem !important;
+  }
 }
 
 .certificate-image-container:hover .certificate-overlay {

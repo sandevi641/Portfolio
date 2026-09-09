@@ -6,7 +6,7 @@ export const ProjectCard = ({ project, onOpenDetails, viewMode = 'grid' }) => {
   if (viewMode === 'list') {
     return (
       <div
-        className="card-base"
+        className="card-base project-card-list-view"
         style={{
           display: 'flex',
           flexWrap: 'wrap',
@@ -114,7 +114,7 @@ export const ProjectCard = ({ project, onOpenDetails, viewMode = 'grid' }) => {
         </div>
 
         {/* Right Action Buttons */}
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+        <div className="project-card-actions" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
           {project.github && (
             <a
               href={project.github}

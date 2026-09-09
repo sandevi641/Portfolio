@@ -38,6 +38,7 @@ export const Statistics = () => {
 
   return (
     <div
+      className="stats-grid"
       style={{
         display: 'grid',
         gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))',
