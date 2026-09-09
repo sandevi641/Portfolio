@@ -58,7 +58,7 @@ export const portfolioData = {
   },
 
   statistics: {
-    projects: "3",
+    projects: "3+",
     technologies: "5+",
     learningExperience: "3+ Years",
     certifications: "4+",

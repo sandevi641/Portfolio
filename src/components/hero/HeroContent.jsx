@@ -344,49 +344,49 @@ export const HeroContent = () => {
           marginTop: '0.5rem',
         }}
       >
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <FolderGit2 size={18} style={{ color: 'var(--color-primary)' }} />
+        <div className="metric-item" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <FolderGit2 size={18} style={{ color: 'var(--color-primary)', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
-              {statistics?.projects || '3'}+
+            <div className="metric-val" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
+              {statistics?.projects || '3+'}
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <div className="metric-lbl" style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Projects
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <Code2 size={18} style={{ color: 'var(--color-secondary)' }} />
+        <div className="metric-item" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <Code2 size={18} style={{ color: 'var(--color-secondary)', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
-              {statistics?.technologies || '5'}+
+            <div className="metric-val" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
+              {statistics?.technologies || '5+'}
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <div className="metric-lbl" style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Tech Stack
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <Award size={18} style={{ color: 'var(--color-accent)' }} />
+        <div className="metric-item" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <Award size={18} style={{ color: 'var(--color-accent)', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
-              {statistics?.certifications || '4'}+
+            <div className="metric-val" style={{ fontSize: '1.05rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
+              {statistics?.certifications || '4+'}
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <div className="metric-lbl" style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               Certifications
             </div>
           </div>
         </div>
 
-        <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-          <GraduationCap size={18} style={{ color: 'var(--color-success)' }} />
+        <div className="metric-item" style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <GraduationCap size={18} style={{ color: 'var(--color-success)', flexShrink: 0 }} />
           <div>
-            <div style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
+            <div className="metric-val" style={{ fontSize: '0.95rem', fontWeight: 700, color: 'var(--color-text-primary)', lineHeight: 1.1 }}>
               Moratuwa
             </div>
-            <div style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
+            <div className="metric-lbl" style={{ fontSize: '0.72rem', color: 'var(--color-text-muted)', textTransform: 'uppercase', letterSpacing: '0.04em' }}>
               IT Undergrad
             </div>
           </div>

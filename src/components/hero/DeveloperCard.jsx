@@ -43,6 +43,7 @@ export const DeveloperCard = () => {
 
   // 3D Parallax Mouse Handlers
   const handleMouseMove = (e) => {
+    if (typeof window !== 'undefined' && window.innerWidth < 768) return;
     if (!cardRef.current) return;
     const rect = cardRef.current.getBoundingClientRect();
     const x = e.clientX - rect.left;
@@ -171,7 +172,7 @@ export const DeveloperCard = () => {
   };
 
   return (
-    <div style={{ position: 'relative', width: '100%', maxWidth: '560px' }}>
+    <div className="developer-card-wrapper" style={{ position: 'relative', width: '100%', maxWidth: '560px', margin: '0 auto' }}>
       {/* Floating Dynamic Orbit Badge 1 (Top-Right) */}
       <div
         className="animate-float developer-card-badge-top"
@@ -234,6 +235,7 @@ export const DeveloperCard = () => {
         className="developer-card-container"
         style={{
           width: '100%',
+          maxWidth: '100%',
           backgroundColor: 'var(--color-code-bg)',
           borderRadius: 'var(--border-radius-lg)',
           border: '1px solid rgba(56, 189, 248, 0.28)',
@@ -261,36 +263,37 @@ export const DeveloperCard = () => {
 
         {/* Titlebar & Tab Navigation */}
         <div
+          className="developer-card-titlebar"
           style={{
             position: 'relative',
             zIndex: 2,
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'space-between',
-            padding: '0.65rem 1rem',
+            padding: '0.65rem 0.85rem',
             backgroundColor: 'rgba(0, 0, 0, 0.65)',
             borderBottom: '1px solid var(--color-border)',
-            flexWrap: 'wrap',
             gap: '0.5rem',
+            overflowX: 'auto',
           }}
         >
           {/* Window controls and tabs */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
-            <div style={{ display: 'flex', gap: '0.45rem', marginRight: '0.25rem' }}>
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', backgroundColor: '#ef4444', boxShadow: '0 0 8px rgba(239, 68, 68, 0.5)' }} />
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', backgroundColor: '#f59e0b', boxShadow: '0 0 8px rgba(245, 158, 11, 0.5)' }} />
-              <span style={{ width: '11px', height: '11px', borderRadius: '50%', backgroundColor: '#10b981', boxShadow: '0 0 8px rgba(16, 185, 129, 0.5)' }} />
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem', flexShrink: 0 }}>
+            <div style={{ display: 'flex', gap: '0.4rem', marginRight: '0.15rem' }}>
+              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#ef4444' }} />
+              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#f59e0b' }} />
+              <span style={{ width: '10px', height: '10px', borderRadius: '50%', backgroundColor: '#10b981' }} />
             </div>
             
-            <div style={{ display: 'flex', gap: '0.35rem' }}>
+            <div className="developer-card-tabs" style={{ display: 'flex', gap: '0.3rem' }}>
               <button
                 type="button"
                 onClick={() => setActiveTab('developer.ts')}
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
-                  padding: '0.25rem 0.65rem',
+                  gap: '0.3rem',
+                  padding: '0.22rem 0.55rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'developer.ts' ? 'rgba(56, 189, 248, 0.15)' : 'transparent',
                   border: activeTab === 'developer.ts' ? '1px solid rgba(56, 189, 248, 0.35)' : '1px solid transparent',
@@ -298,6 +301,7 @@ export const DeveloperCard = () => {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                   transition: 'all var(--transition-fast)',
                 }}
               >
@@ -311,8 +315,8 @@ export const DeveloperCard = () => {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
-                  padding: '0.25rem 0.65rem',
+                  gap: '0.3rem',
+                  padding: '0.22rem 0.55rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'stack.json' ? 'rgba(129, 140, 248, 0.15)' : 'transparent',
                   border: activeTab === 'stack.json' ? '1px solid rgba(129, 140, 248, 0.35)' : '1px solid transparent',
@@ -320,6 +324,7 @@ export const DeveloperCard = () => {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                   transition: 'all var(--transition-fast)',
                 }}
               >
@@ -333,8 +338,8 @@ export const DeveloperCard = () => {
                 style={{
                   display: 'inline-flex',
                   alignItems: 'center',
-                  gap: '0.35rem',
-                  padding: '0.25rem 0.65rem',
+                  gap: '0.3rem',
+                  padding: '0.22rem 0.55rem',
                   borderRadius: 'var(--border-radius-xs)',
                   backgroundColor: activeTab === 'terminal.sh' ? 'rgba(16, 185, 129, 0.15)' : 'transparent',
                   border: activeTab === 'terminal.sh' ? '1px solid rgba(16, 185, 129, 0.35)' : '1px solid transparent',
@@ -342,6 +347,7 @@ export const DeveloperCard = () => {
                   fontSize: '0.75rem',
                   fontWeight: 600,
                   cursor: 'pointer',
+                  whiteSpace: 'nowrap',
                   transition: 'all var(--transition-fast)',
                 }}
               >
@@ -352,9 +358,10 @@ export const DeveloperCard = () => {
           </div>
 
           {/* Right Header Bar: Live Clock & Copy button */}
-          <div style={{ display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexShrink: 0 }}>
             {currentTime && (
               <span
+                className="hide-mobile"
                 style={{
                   fontSize: '0.7rem',
                   color: 'var(--color-text-muted)',
@@ -386,6 +393,7 @@ export const DeveloperCard = () => {
                 border: copied ? '1px solid rgba(16, 185, 129, 0.3)' : '1px solid var(--color-border)',
                 transition: 'all var(--transition-fast)',
                 cursor: 'pointer',
+                whiteSpace: 'nowrap',
               }}
             >
               {copied ? <Check size={13} /> : <Copy size={13} />}
@@ -396,14 +404,16 @@ export const DeveloperCard = () => {
 
         {/* Code Body Area */}
         <div
+          className="developer-card-body"
           style={{
             position: 'relative',
             zIndex: 2,
-            padding: '1.25rem 1.4rem',
-            minHeight: '275px',
+            padding: '1.15rem 1.25rem',
+            minHeight: '265px',
             maxHeight: '340px',
             overflowY: 'auto',
-            lineHeight: '1.7',
+            overflowX: 'auto',
+            lineHeight: '1.65',
             color: '#e2e8f0',
             backgroundColor: 'rgba(11, 15, 25, 0.88)',
           }}
@@ -416,30 +426,35 @@ export const DeveloperCard = () => {
                 return (
                   <div
                     key={line.num}
+                    className="code-line-item"
                     onMouseEnter={() => setActiveHoverLine(line.num)}
                     onMouseLeave={() => setActiveHoverLine(null)}
                     style={{
                       display: 'flex',
-                      alignItems: 'center',
-                      gap: '1rem',
-                      padding: '0.1rem 0.35rem',
+                      alignItems: 'flex-start',
+                      gap: '0.75rem',
+                      padding: '0.1rem 0.25rem',
                       borderRadius: 'var(--border-radius-xs)',
                       backgroundColor: isHovered ? 'rgba(56, 189, 248, 0.08)' : 'transparent',
                       transition: 'background-color 0.1s ease',
                     }}
                   >
                     <span
+                      className="code-line-num"
                       style={{
-                        width: '20px',
+                        width: '18px',
                         textAlign: 'right',
                         fontSize: '0.75rem',
                         color: isHovered ? 'var(--color-primary)' : '#475569',
                         userSelect: 'none',
+                        flexShrink: 0,
+                        paddingTop: '1px',
                       }}
                     >
                       {line.num}
                     </span>
                     <span
+                      className="code-line-text"
                       style={{ whiteSpace: 'pre-wrap', wordBreak: 'break-word', flex: 1 }}
                       dangerouslySetInnerHTML={{ __html: line.code }}
                     />
