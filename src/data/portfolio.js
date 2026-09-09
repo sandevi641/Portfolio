@@ -27,7 +27,7 @@ export const portfolioData = {
 
   social: {
     github: "https://github.com/sandevi641", // [YOUR GITHUB URL]
-    linkedin: "https://www.linkedin.com/in/sandevi-ayodhya-873376269?utm_source=share_via&utm_content=profile&utm_medium=member_ios", // [YOUR LINKEDIN URL]
+    linkedin: "https://www.linkedin.com/in/sandevi-de-silva-873376269", // [YOUR LINKEDIN URL]
     email: "san20020803@gmail.com", // [YOUR EMAIL LINK]
     whatsapp: "https://wa.me/94702872524", // [YOUR WHATSAPP LINK]
   },
