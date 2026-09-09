@@ -7,7 +7,9 @@
 
 import project01Img from '../assets/images/projects/project-01.jpg';
 import project02Img from '../assets/images/projects/project-02.png';
-import project03Img from '../assets/images/projects/project-03.jpg';
+import project03Img from '../assets/images/projects/project-03.png';
+import project04Img from '../assets/images/projects/project-04.png';
+
 
 export const projectCategories = [
   'All',
@@ -87,22 +89,22 @@ export const projectsData = [
   {
     id: 'project-03',
     number: '03',
-    title: 'High-Throughput Microservices REST API & Gateway',
+    title: 'ApiHub',
     featured: false,
-    category: 'Backend',
-    tags: ['Backend', 'Personal'],
+    category: 'Web',
+    tags: ['Web', 'Personal'],
     shortDescription:
-      'Distributed backend architecture featuring API gateway routing, rate-limiting, centralized logging, and token verification.',
+      'APIHub is a platform that imports project folders, detects APIs, generates documentation, and helps developers test and improve their projects.',
     fullDescription:
-      'Designed a resilient backend system adhering to microservice design principles, featuring isolated authentication, product catalog, and order processing services with an asynchronous event bus.',
+      'APIHub is a developer platform that allows users to import existing project folders, analyze their codebase, and automatically detect API endpoints. It generates API documentation, supports endpoint testing, and helps developers create new feature specifications and code suggestions to improve their projects.',
     problem:
-      'Monolithic architectures struggle under localized traffic spikes, making independent scalability and fault isolation difficult for e-commerce backends.',
+      'Developers struggle to understand and improve existing codebases. APIHub simplifies this by analyzing imported projects and helping manage their APIs.',
     solution:
       'Implemented independent Node/Express microservices managed behind an Express Gateway with rate limiting, centralized Winston logging, and Redis token caching.',
-    technologies: ['Node.js', 'Express', 'MongoDB', 'Redis', 'Docker', 'JWT', 'Jest'],
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma ORM', 'JWT', 'bcrypt', 'OpenAPI/Swagger', 'Axios', 'Supertest', 'Vitest/Jest', 'Git', 'GitHub', 'Docker.'],
     keyFeatures: [
-      'Token bucket algorithm rate limiting to prevent API abuse',
-      'Centralized health check endpoints & request correlation IDs',
+      'Import existing project folders or ZIP files',
+      'Automatically detect API endpoints and frameworks',
       'Docker Compose orchestration for seamless local reproducibility',
       'Comprehensive unit and integration test suite with 85%+ coverage',
     ],
@@ -120,34 +122,34 @@ export const projectsData = [
   {
     id: 'project-04',
     number: '04',
-    title: 'Student Academic Portal & Course Registration System',
+    title: 'SpendWise',
     featured: false,
     category: 'Academic',
-    tags: ['Academic', 'Full Stack', 'Web'],
+    tags: ['Academic', 'Web'],
     shortDescription:
-      'Comprehensive academic management portal for student grade auditing, course prerequisites validation, and timetable scheduling.',
+      'SpendWise is a personal finance web application that helps users track income and expenses, manage budgets and savings goals, and analyze spending habits through interactive dashboards and personalized financial insights.',
     fullDescription:
-      'Engineered a secure web portal for university academic advisors and students to manage semester course enrollments with automatic prerequisite validation algorithms.',
+      'SpendWise is a full-stack personal finance and daily spending management web application designed to help users organize and manage their financial activities. It allows users to record income and expenses, categorize transactions, set budgets, track savings goals, and monitor spending habits through interactive dashboards and analytics. The system also provides personalized financial insights and budget alerts to support better financial planning and decision-making.',
     problem:
-      'Manual course registration often resulted in scheduling clashes, unfulfilled prerequisite violations, and administrative overhead.',
+      'Many people struggle to track daily expenses, control unnecessary spending, and manage savings. Existing methods often lack clear insights into spending habits. SpendWise was developed to provide a simple platform for managing finances and making better financial decisions.',
     solution:
-      'Built a Java + Spring Boot backend with a React UI and relational MySQL integrity constraints preventing conflicting class enrollments.',
-    technologies: ['Java', 'Spring Boot', 'MySQL', 'React', 'Bootstrap', 'JUnit'],
+      'SpendWise provides a centralized web platform to record income and expenses, manage budgets and savings goals, and analyze spending habits through interactive dashboards. It helps users identify unnecessary spending, receive budget alerts, and make better financial decisions.',
+    technologies: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'Express.js', 'PostgreSQL', 'Prisma ORM', 'JWT', 'Recharts', 'Jest', 'Supertest', 'Git', 'GitHub.'],
     keyFeatures: [
-      'Automated prerequisite validation dependency tree parsing',
-      'Interactive visual weekly timetable clash detector',
-      'Cumulative GPA and credit hour calculation engine',
-      'Role-based portals for Students, Instructors, and Department Admins',
+      'Income & Expense Tracking – Record and categorize daily financial transactions.',
+      'Budget & Savings Management – Set budgets, track savings goals, and receive alerts.',
+      'Financial Analytics – View spending patterns and financial progress through interactive dashboards.',
+      'Personalized Insights – Get spending recommendations and identify unnecessary expenses.',
     ],
     contribution:
-      'Implemented the course prerequisite validation algorithm in Java and designed the normalized 3NF database schema.',
-    role: 'Full-Stack Developer (Academic Project)',
+      '',
+    role: '',
     challenges:
-      'Handling recursive prerequisite chains and circular dependency detection during bulk course selection.',
+      '',
     outcomes:
-      'Demonstrated 100% prerequisite validation accuracy across 500+ test registration combinations.',
-    image: project01Img,
-    github: 'https://github.com/your-username/academic-portal-system',
+      'SpendWise improves financial awareness, budget control, savings planning, and decision-making through organized tracking and personalized insights.',
+    image: project04Img,
+    github: 'https://github.com/sandevi641/SpendWise',
     liveDemo: 'https://portal-demo.example.com',
   },
   {
@@ -182,38 +184,5 @@ export const projectsData = [
     image: project02Img,
     github: 'https://github.com/your-username/finance-analytics-dashboard',
     liveDemo: 'https://finance-dashboard.example.com',
-  },
-  {
-    id: 'project-06',
-    number: '06',
-    title: 'Automated Developer Portfolio Generator & CLI Tool',
-    featured: false,
-    category: 'Backend',
-    tags: ['Backend', 'Personal'],
-    shortDescription:
-      'Node.js command-line utility that inspects public GitHub repositories, generates structured JSON summaries, and scaffolds static portfolios.',
-    fullDescription:
-      'Developed a CLI tool distributed via npm that prompts developers for their profile details, pulls their top GitHub project statistics via Octokit, and generates a ready-to-deploy portfolio skeleton.',
-    problem:
-      'Undergraduate developers often spend days configuring build tooling rather than focusing on writing clear project descriptions.',
-    solution:
-      'Engineered an interactive Node.js CLI tool with Inquirer and Commander to automate scaffold generation in under 60 seconds.',
-    technologies: ['Node.js', 'TypeScript', 'GitHub REST API', 'Commander.js', 'Chalk'],
-    keyFeatures: [
-      'Interactive terminal prompts with input validation and color formatting',
-      'Automatic GitHub repo fetching, star counting, and language detection',
-      'One-command local dev server preview launch',
-      'Zero external build dependencies for the generated static bundle',
-    ],
-    contribution:
-      'Developed the CLI engine, GitHub API integration, template compilation pipeline, and npm package distribution.',
-    role: 'Open-Source Creator',
-    challenges:
-      'Handling GitHub API rate limits gracefully with unauthenticated token fallback prompts.',
-    outcomes:
-      'Used by fellow IT peers to scaffold their initial resume showcase websites.',
-    image: project03Img,
-    github: 'https://github.com/your-username/portfolio-scaffold-cli',
-    liveDemo: 'https://npmjs.com/package/portfolio-scaffold-cli',
-  },
+  }
 ];
