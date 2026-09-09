@@ -7,7 +7,7 @@
 
 export const portfolioData = {
   personal: {
-    name: "Sandevi  de  Silva",
+    name: "Sandevi de Silva",
     shortName: "Sandevi",
     title: "University of Moratuwa | IT Undergraduate",
     subtitle: "Software Engineering Enthusiast",

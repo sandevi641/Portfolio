@@ -65,30 +65,31 @@ export const HeroContent = () => {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'flex-start',
-        gap: '1.35rem',
-        maxWidth: '680px',
+        gap: '1.25rem',
+        maxWidth: '100%',
+        width: '100%',
       }}
     >
       {/* Availability / Status Pill */}
-      <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', flexWrap: 'wrap', width: '100%' }}>
         {availability?.active && (
           <div
             className="badge badge-success animate-fade-in"
             style={{
-              padding: '0.45rem 0.95rem',
-              fontSize: '0.8125rem',
+              padding: '0.4rem 0.85rem',
+              fontSize: '0.78rem',
               boxShadow: '0 2px 14px rgba(16, 185, 129, 0.22)',
               border: '1px solid rgba(16, 185, 129, 0.4)',
               display: 'inline-flex',
               alignItems: 'center',
-              gap: '0.5rem',
+              gap: '0.45rem',
               borderRadius: 'var(--border-radius-full)',
             }}
           >
             <span
               style={{
-                width: '8px',
-                height: '8px',
+                width: '7px',
+                height: '7px',
                 borderRadius: '50%',
                 backgroundColor: 'var(--color-success)',
               }}
@@ -101,51 +102,52 @@ export const HeroContent = () => {
         <span
           className="badge"
           style={{
-            padding: '0.45rem 0.85rem',
-            fontSize: '0.775rem',
+            padding: '0.4rem 0.75rem',
+            fontSize: '0.75rem',
             fontFamily: 'var(--font-mono)',
             backgroundColor: 'var(--color-surface)',
             color: 'var(--color-primary)',
             borderColor: 'var(--color-border)',
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '0.4rem',
+            gap: '0.35rem',
             borderRadius: 'var(--border-radius-full)',
           }}
         >
-          <Zap size={13} style={{ color: 'var(--color-warning)' }} />
+          <Zap size={12} style={{ color: 'var(--color-warning)' }} />
           <span>Colombo, Sri Lanka</span>
         </span>
       </div>
 
       {/* Greeting & Headline */}
-      <div>
+      <div style={{ width: '100%' }}>
         <div
           style={{
             fontFamily: 'var(--font-mono)',
-            fontSize: '1rem',
+            fontSize: '0.9rem',
             color: 'var(--color-primary)',
             fontWeight: 600,
             display: 'inline-flex',
             alignItems: 'center',
-            gap: '0.45rem',
+            gap: '0.4rem',
             marginBottom: '0.35rem',
             letterSpacing: '0.04em',
             textTransform: 'uppercase',
           }}
         >
-          <Sparkles size={15} />
+          <Sparkles size={14} />
           <span>Hello, I'm</span>
         </div>
         
         <h1
           style={{
             fontFamily: 'var(--font-display)',
-            fontSize: 'clamp(2.1rem, 4.2vw, 3.2rem)',
+            fontSize: 'clamp(1.75rem, 5.8vw, 3.2rem)',
             fontWeight: 800,
-            lineHeight: 1.1,
-            letterSpacing: '-0.03em',
+            lineHeight: 1.15,
+            letterSpacing: '-0.025em',
             marginBottom: '0.65rem',
+            wordBreak: 'break-word',
           }}
         >
           <span className="text-gradient">{personal.name}</span>
@@ -157,16 +159,18 @@ export const HeroContent = () => {
             minHeight: '2.2rem',
             display: 'flex',
             alignItems: 'center',
-            gap: '0.5rem',
+            gap: '0.4rem',
+            flexWrap: 'wrap',
           }}
         >
           <span
             style={{
-              fontSize: 'clamp(1.15rem, 2.2vw, 1.45rem)',
+              fontSize: 'clamp(0.95rem, 3.4vw, 1.4rem)',
               fontWeight: 600,
               color: 'var(--color-text-primary)',
               lineHeight: 1.35,
               fontFamily: 'var(--font-display)',
+              wordBreak: 'break-word',
             }}
           >
             {displayedRole}
@@ -175,9 +179,10 @@ export const HeroContent = () => {
             style={{
               display: 'inline-block',
               width: '2px',
-              height: '1.25rem',
+              height: '1.15rem',
               backgroundColor: 'var(--color-primary)',
               animation: 'pulse 1s infinite',
+              flexShrink: 0,
             }}
           />
         </div>
@@ -185,16 +190,18 @@ export const HeroContent = () => {
         <p
           style={{
             fontFamily: 'var(--font-mono)',
-            fontSize: '0.875rem',
+            fontSize: '0.825rem',
             color: 'var(--color-text-muted)',
             fontWeight: 500,
-            marginTop: '0.3rem',
-            display: 'inline-flex',
-            alignItems: 'center',
+            marginTop: '0.35rem',
+            display: 'flex',
+            alignItems: 'flex-start',
             gap: '0.45rem',
+            lineHeight: 1.5,
+            wordBreak: 'break-word',
           }}
         >
-          <Code2 size={15} style={{ color: 'var(--color-secondary)' }} />
+          <Code2 size={15} style={{ color: 'var(--color-secondary)', flexShrink: 0, marginTop: '2px' }} />
           <span>{personal.tagline || 'Building scalable, efficient web & mobile applications with modern technologies.'}</span>
         </p>
       </div>
