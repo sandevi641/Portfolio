@@ -33,8 +33,8 @@ export const portfolioData = {
   },
 
   resume: {
-    path: "/cv.pdf",
-    fileName: "Developer_Resume.pdf",
+    path: "/Sandevi De Silva (1).pdf",
+    fileName: "Sandevi De Silva (1).pdf",
     label: "Download CV",
     viewLabel: "View CV",
   },

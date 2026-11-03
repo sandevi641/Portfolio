@@ -171,7 +171,7 @@ export const Navbar = () => {
             {/* Desktop CV button */}
             <a
               href={portfolioData.resume.path}
-              download={portfolioData.resume.fileName || 'CV.pdf'}
+              download={portfolioData.resume.fileName || 'Sandevi De Silva (1).pdf'}
               className="btn btn-outline btn-sm desktop-cv-btn"
               style={{ display: 'none' }}
               title="Download CV (PDF)"
