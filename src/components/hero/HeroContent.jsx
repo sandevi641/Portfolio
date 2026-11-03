@@ -293,7 +293,7 @@ export const HeroContent = () => {
         <Button
           variant="secondary"
           href={resume.path}
-          download={resume.fileName || 'CV.pdf'}
+          download={resume.fileName || 'Sandevi De Silva (1).pdf'}
           icon={FileDown}
           iconPosition="left"
         >

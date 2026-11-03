@@ -138,7 +138,7 @@ export const DeveloperCard = () => {
         type: 'output',
         text: 'Core Stack: React, Node.js, Express, MongoDB, MySQL, TypeScript, Firebase, Docker, Git',
       });
-    } else if (cleanCmd === 'cv' || cleanCmd === 'open cv.pdf' || cleanCmd === 'download cv') {
+    } else if (cleanCmd === 'cv' || cleanCmd === 'open cv.pdf' || cleanCmd === 'download cv' || cleanCmd === 'open sandevi de silva (1).pdf') {
       newEntries.push({ type: 'output', text: 'Downloading resume / CV...' });
       setTimeout(() => {
         window.open(resume.path, '_blank');

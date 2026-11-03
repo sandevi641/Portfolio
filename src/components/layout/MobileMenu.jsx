@@ -123,7 +123,7 @@ export const MobileMenu = ({ isOpen, onClose, activeSection, onNavClick }) => {
         <div style={{ display: 'flex', flexDirection: 'column', gap: '1.25rem', paddingTop: '1.5rem', borderTop: '1px solid var(--color-border)' }}>
           <a
             href={portfolioData.resume.path}
-            download={portfolioData.resume.fileName || 'CV.pdf'}
+            download={portfolioData.resume.fileName || 'Sandevi De Silva (1).pdf'}
             className="btn btn-primary"
             style={{ width: '100%', justifyContent: 'center' }}
             onClick={onClose}
